@@ -5,15 +5,16 @@
     <div class="col mb-3" *ngFor="let heroe of heroes">
       <div class="card h-100 pb-3">
         <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
-        <div class="card-body">
-          <h5 class="card-title">{{ heroe.nombre }}</h5>
+        <div class="card-body" *ngIf="mostrar">
+         <h5 class="card-title">{{ heroe.nombre }}</h5>         
           <p class="card-text">{{ heroe.bio }}</p>
           <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
-        </div>
+        </div>    
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
-        <button class="btn btn-outline-primary" type="submit">Ver más...</button>
-      </div>
+        <button class="btn btn-primary btn-block" type="submit">Ver más...</button>
+        <button (click)="mostrar = !mostrar" class="btn btn-outline-warning btn-block mb-3 mt-2" type="submit">Mostrar/Ocultar Info</button> 
+      </div>       
     </div>
   </div>
