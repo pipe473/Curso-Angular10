@@ -12,8 +12,6 @@ export class HeroeComponent {
 
   heroe: any = {}
 
-  showCompany = 'DC';
-
   constructor( 
       private _heroesService: HeroesService,
       private activatedRoute: ActivatedRoute
