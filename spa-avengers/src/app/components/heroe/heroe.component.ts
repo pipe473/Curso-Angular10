@@ -12,6 +12,8 @@ export class HeroeComponent {
 
   heroe: any = {}
 
+  showCompany = 'DC';
+
   constructor( 
       private _heroesService: HeroesService,
       private activatedRoute: ActivatedRoute
@@ -19,6 +21,7 @@ export class HeroeComponent {
 
     this.activatedRoute.params.subscribe( params => {
       this.heroe = this._heroesService.getHeroe( params['id']);
+      console.log(this.heroe);      
     });
   }
 
