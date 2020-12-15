@@ -14,8 +14,13 @@
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
-        <!-- <button class="btn btn-primary btn-block" type="submit">Ver más...</button> -->
-        <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary">Ver más link...</a>
+        <button (click)="verHeroe(i)"
+            type="button"
+            class="btn btn-primary btn-block" 
+        >
+          Ver más...
+        </button>
+        <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary">Ver más link...</a> -->
         <!-- <button (click)="mostrar = !mostrar" class="btn btn-outline-warning btn-block mb-3 mt-2" type="submit">Mostrar/Ocultar Info</button>  -->
       </div>       
     </div>
