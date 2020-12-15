@@ -69,9 +69,11 @@ export class HeroesService {
     return this.heroes;
   }
 
+
   getHeroe(indexHeroe: string) {
     return this.heroes[indexHeroe];
   }
+
 
   buscarHeroes(termino: string): Heroe[] {
     let heroesArr: Heroe[] = [];
@@ -87,6 +89,7 @@ export class HeroesService {
     return heroesArr;
   }
 }
+
 
 export interface Heroe {
   nombre: string;
