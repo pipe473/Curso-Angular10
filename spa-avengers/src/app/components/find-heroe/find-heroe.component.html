@@ -10,11 +10,16 @@
 </div>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col mb-3" *ngFor="let heroe of heroes; let i = index;">
+
+  
+      <app-heroe-tarjeta [heroe]="buscadorHeroe" [index]="i" *ngFor="let buscadorHeroe of heroes; let i = index;"></app-heroe-tarjeta>
+              
+
+    <!-- <div class="col mb-3" *ngFor="let heroe of heroes; let i = index;">
       <div class="card h-100 pb-3 animated fadeIn fast">
-        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre"> -->
         <!-- <div class="card-body" *ngIf="mostrar"> -->
-        <div class="card-body">
+        <!-- <div class="card-body">
          <h5 class="card-title">{{ heroe.nombre }}</h5>         
           <p class="card-text">{{ heroe.bio }}</p>
           <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small>
@@ -31,5 +36,5 @@
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
       </div>       
-    </div>
+    </div> -->
   </div>
