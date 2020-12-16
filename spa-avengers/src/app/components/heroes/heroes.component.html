@@ -4,7 +4,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <!-- <div class="col mb-3" > -->
     <!-- *ngFor="let heroe of heroes; let i = index;" -->
-    <app-heroe-tarjeta *ngFor="let heroe of heroes; let i = index;"></app-heroe-tarjeta>
+    <app-heroe-tarjeta [heroe]="superheroe" [index]="i" *ngFor="let superheroe of heroes; let i = index;"></app-heroe-tarjeta>
             
     <!-- </div> -->
   </div>

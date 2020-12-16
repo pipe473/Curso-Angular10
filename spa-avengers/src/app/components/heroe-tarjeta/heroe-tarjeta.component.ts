@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HeroesService } from '../../services/heroes.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heroe-tarjeta',
@@ -7,11 +7,17 @@ import { HeroesService } from '../../services/heroes.service';
 })
 export class HeroeTarjetaComponent implements OnInit {
 
-  heroe: any = {};
+  @Input() heroe: any = {};
+  @Input() index: number;
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  verHeroe(){
+    console.log( this.index );
+    this._router.navigate( [ '/heroe', this.index ] );      
   }
 
 }
