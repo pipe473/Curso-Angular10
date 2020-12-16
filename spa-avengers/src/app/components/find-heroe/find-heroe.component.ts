@@ -26,8 +26,8 @@ export class FindHeroeComponent implements OnInit {
     })
   }
 
-  verHeroe(index: number){
-    this._router.navigate( [ '/heroe', index ] );  
+  homeHeroes(){
+    this._router.navigate( [ '/heroes' ] );  
   }
 
 }

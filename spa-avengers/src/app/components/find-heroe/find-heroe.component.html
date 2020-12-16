@@ -17,17 +17,19 @@
         <div class="card-body">
          <h5 class="card-title">{{ heroe.nombre }}</h5>         
           <p class="card-text">{{ heroe.bio }}</p>
-          <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+          <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small>
+          
+            <button (click)="homeHeroes()"
+            type="button"
+            class="btn btn-outline-success ml-5" 
+            >
+              Back to all heroes
+            </button>
+          </p>
         </div>    
-        <div class="card-footer">
+        <div class="card-footer">          
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
-        <button (click)="verHeroe(i)"
-            type="button"
-            class="btn btn-primary btn-block" 
-        >
-          Ver más...
-        </button>
       </div>       
     </div>
   </div>
