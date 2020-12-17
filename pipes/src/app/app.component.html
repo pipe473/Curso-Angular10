@@ -39,12 +39,12 @@
         </tr>
         <tr>
           <td>{{ PI }}</td>
-          <td>number:'3.0-0'</td>
+          <td>number: '3.0-0'</td>
           <td>{{ PI | number:'3.0-0' }}</td>
         </tr>
         <tr>
           <td>{{ PI }}</td>
-          <td>number:.0-2</td>
+          <td>number: .0-2</td>
           <td>{{ PI | number:'.0-2' }}</td>
         </tr>
         <tr>
@@ -54,7 +54,7 @@
         </tr>
         <tr>
           <td>{{ porcentaje }}</td>
-          <td>percent:'2.2-2'</td>
+          <td>percent: '2.2-2'</td>
           <td>{{ porcentaje | percent:'2.2-2' }}</td>
         </tr>
         <tr>
@@ -64,37 +64,35 @@
         </tr>
         <tr>
           <td>{{ salario }}</td>
-          <td>currency:'EUR'</td>
+          <td>currency: 'EUR'</td>
           <td>{{ salario | currency:'EUR' }}</td>
         </tr>
         <tr>
           <td>{{ salario }}</td>
-          <td>currency:'CAD'</td>
-          <td>{{ salario | currency:'CAD':'symbol':'.0-0' }}</td>
+          <td>currency: 'CAD'</td>
+          <td>{{ salario | currency:'CAD':'symbol-narrow':'.0-0' }}</td>
         </tr>
       </tbody>
-    </table>
-
-    <br /><br />
-
-    <h3>Más ejemplos con Slice:</h3>
-    <br>
-    <table class="table">
-      <h4>
-        Slice
-        <small>(Coge una porción desde la posición 5 hasta el número 20)</small>
-      </h4>
-      <tbody>
-      <tr>
-        <td>{{ arreglo }}</td>
-        <td>slice:1:5</td>
-        <td>{{ arreglo | slice: 1:5 }}</td>
-      </tr>
-    </tbody>
-
-      <ul>
-        <li *ngFor="let item of arreglo | slice: 5:20">{{ item }}</li>
-      </ul>
-    </table>
+    </table> 
   </div>
 </div>
+<br>
+<h2>Otros ejemplos de Slice:</h2>
+    <hr>
+  <h3>Slice <small>1:4</small></h3>
+  <p>(Coge una porción desde la posición 1 hasta el número 4)</p>
+      <ul class="list-group">
+        <li *ngFor="let personaje of personajes | slice: 1:4"
+        class="list-group-item">{{ personaje }}</li>
+      </ul>
+    <br>
+    <h3>JSON</h3>
+    <hr>
+    <div class="row mb-5">
+      <div class="col">
+        <pre>
+          {{ heroe | json }}
+        </pre>
+      </div>
+    </div>
+  
