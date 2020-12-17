@@ -3,8 +3,10 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import localeFr from '@angular/common/locales/fr';
 
-registerLocaleData( localeEs )
+registerLocaleData( localeEs );
+registerLocaleData( localeFr );
 
 import { AppComponent } from './app.component';
 
