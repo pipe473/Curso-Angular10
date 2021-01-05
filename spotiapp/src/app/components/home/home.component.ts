@@ -8,7 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  constructor( private http: HttpClient ) { }
+  constructor( private http: HttpClient ) { 
+
+    console.log('Constructor del home llamado');  
+    this.http.get('https://restcountries.eu/rest/v2/lang/es');
+
+  }
 
   ngOnInit(): void {
   }
