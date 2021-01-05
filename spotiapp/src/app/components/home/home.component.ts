@@ -8,11 +8,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
+  paises: any[] = [];
+
   constructor( private http: HttpClient ) { 
 
     console.log('Constructor del home llamado');  
-    this.http.get('https://restcountries.eu/rest/v2/lang/es').subscribe( data => {
-      console.log(data);      
+    this.http.get('https://restcountries.eu/rest/v2/lang/es').subscribe( (respuesta: any) => {
+      this.paises = respuesta;
+      console.log(respuesta);      
     })
 
   }
