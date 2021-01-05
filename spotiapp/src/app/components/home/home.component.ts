@@ -11,7 +11,9 @@ export class HomeComponent implements OnInit {
   constructor( private http: HttpClient ) { 
 
     console.log('Constructor del home llamado');  
-    this.http.get('https://restcountries.eu/rest/v2/lang/es');
+    this.http.get('https://restcountries.eu/rest/v2/lang/es').subscribe( data => {
+      console.log(data);      
+    })
 
   }
 
