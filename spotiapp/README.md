@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
+## Kit de font awasome
+  Este es el link de usuario par font awasome <script src="https://kit.fontawesome.com/2511d71cb6.js" crossorigin="anonymous"></script>
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
