@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -33,7 +32,11 @@ export class SpotifyService {
   }
 
   getArtista( id: string ) {
-    return this.getQuery(`artists/${ id }`)
+    return this.getQuery(`artists/${ id }`);
           // .pipe( map (data =>  data['artists'].items ));      
+  }
+
+  getTopTracks( id: string ) {
+    return this.getQuery(`artists/${id}/top-tracks?market=US`).pipe( map (data => data['tracks']));     
   }
 }
