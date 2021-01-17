@@ -13,8 +13,8 @@ export class AuthService {
   // Create an observable of Auth0 instance of client
   auth0Client$ = (from(
     createAuth0Client({
-      domain: "strider.auth0.com",
-      client_id: "JaeWH01OBrXsxHSFBY4wdAz6Rj9cthOZ",
+      domain: "dev-qbbfzsh2.eu.auth0.com",
+      client_id: "Qzzwixyxv6Ovr33LrFzvguXA40sZLDbB",
       redirect_uri: `${window.location.origin}/callback`
     })
   ) as Observable<Auth0Client>).pipe(
