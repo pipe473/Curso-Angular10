@@ -19,12 +19,14 @@
         <span class="navbar-text">
          
           <button *ngIf="!auth.loggedIn"
-              class="btn btn-outline-primary mr-5">
+                  (click)="auth.login()"
+                  class="btn btn-outline-primary mr-5">
             Ingresar
           </button>
 
           <button *ngIf="auth.loggedIn"
-              class="btn btn-outline-danger ml-5">
+                  (click)="auth.logout()"
+                  class="btn btn-outline-danger ml-5">
             Salir
           </button>
 
