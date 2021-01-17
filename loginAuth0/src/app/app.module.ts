@@ -21,6 +21,9 @@ import { PreciosComponent } from './components/precios/precios.component';
     AppRoutingModule
   ],
   providers: [],
+
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
