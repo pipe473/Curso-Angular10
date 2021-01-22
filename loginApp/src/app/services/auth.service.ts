@@ -7,7 +7,7 @@ import { UsuarioModel } from '../models/usuario.model';
 })
 export class AuthService {
 
-  private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
+  private url = 'https://identitytoolkit.googleapis.com/v1/accounts';
   private apikey = 'AIzaSyBHs9VH-KfFB4OM5USnuZEBfkq4NfPPbnQ';
 
 
@@ -28,7 +28,15 @@ export class AuthService {
       }
   
       newUser( usuario: UsuarioModel ) {
+        const authData = {
+          ...usuario,
+          returnSecureToken: true
+        };
 
+        return this.http.post(
+          `${this.url}:signUp?key=${this.apikey}`,
+          authData
+        );
       }
   
 }
