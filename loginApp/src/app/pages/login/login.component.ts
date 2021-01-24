@@ -28,12 +28,7 @@ export class LoginComponent implements OnInit {
 
     }, (err) => {
       console.log(err.error.error.message);      
-    });
-
-    // console.log(this.usuario);
-    
-
-    // console.log( form );    
+    }); 
   }
 
 }
