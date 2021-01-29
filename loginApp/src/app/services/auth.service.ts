@@ -22,7 +22,9 @@ export class AuthService {
   constructor(private http: HttpClient) {
     this.readToken();
   }
-  logout() {}
+  logout() {
+    localStorage.removeItem('token');
+  }
 
   login(usuario: UsuarioModel) {
     const authData = {
@@ -73,7 +75,7 @@ export class AuthService {
   isAuthenticated(): boolean {
 
     return this.userToken.length > 2;
-    
+
   }
 
 }
