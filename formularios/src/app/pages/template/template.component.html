@@ -15,6 +15,9 @@
              minlength="5"
              #nombre="ngModel"
              required>
+      <small *ngIf="nombre.invalid && nombre.touched"
+             class="form-text text-danger">Ingrese un mínimo 5 letras
+      </small>
     </div>
   </div>
   <div class="mb-3 row">
@@ -30,6 +33,9 @@
              minlength="5"
              #apellido="ngModel"
              required>
+      <small *ngIf="apellido.invalid && apellido.touched"
+             class="form-text text-danger">Ingrese un mínimo 5 letras
+      </small>
     </div>
   </div>
   <div class="mb-3 row">
@@ -45,6 +51,9 @@
              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
              #correo="ngModel"
              required>
+      <small *ngIf="nombre.invalid && nombre.touched"
+             class="form-text text-danger">ELcorreo es obligatorio
+      </small>
     </div>
   </div>
   
