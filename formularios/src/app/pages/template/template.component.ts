@@ -13,7 +13,8 @@ export class TemplateComponent implements OnInit {
     nombre: '',
     apellido: '',
     correo: '',
-    pais: ''
+    pais: '',
+    genero: ''
   }
 
   paises: any[] = [];
@@ -28,10 +29,7 @@ export class TemplateComponent implements OnInit {
       this.paises.unshift({
         nombre: '[Seleccione Pais]',
         codigo: ''
-      })
-      
-      console.log( this.paises );
-      
+      })      
     });
 
   }
