@@ -55,7 +55,7 @@
              placeholder="Distrito"
              formControlName="distrito" 
              [class.is-invalid]="distritoNoValido"
-        />
+          />
     </div>
     <div class="col">
       <input type="text" 
@@ -63,7 +63,7 @@
              placeholder="Ciudad" 
              formControlName="ciudad" 
              [class.is-invalid]="ciudadNoValida"
-      />
+        />
     </div>
   </div>
 
@@ -86,7 +86,8 @@
                     [formControlName]="i">
            </td>
            <td>
-             <button class="btn btn-danger">
+             <button class="btn btn-danger"
+                    (click)="borrarPasatiempo(i)">
               Borrar
              </button>
            </td>
@@ -95,16 +96,13 @@
       </table>
       <div class="d-grid gap-2">
       <button class="btn btn-primary mt-3 mb-5 btn-block"
-              type="button">
+              type="button"
+              (click)="agregarPasatiempo()">
         +Agregar
       </button>
     </div>
     </div>
   </div>
-
-
-
-
   <div class="mb-3 row">
     <label class="col-2 col-form-label">&nbsp;</label>
     <div class="d-grid gap-2">

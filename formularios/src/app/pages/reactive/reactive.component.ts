@@ -53,9 +53,7 @@ export class ReactiveComponent implements OnInit {
         distrito: ['', Validators.required ],
         ciudad: ['', Validators.required ]
       }),
-      pasatiempos: this.fb.array( [
-        [], [], []
-      ] )
+      pasatiempos: this.fb.array([])
     });
   }
 
@@ -72,6 +70,14 @@ export class ReactiveComponent implements OnInit {
       }
     });
 
+  }
+
+  agregarPasatiempo(){
+    this.pasatiempos.push( this.fb.control('', Validators.required ) )
+  }
+
+  borrarPasatiempo(i: number){
+    this.pasatiempos.removeAt(i);
   }
 
   guardar() {
